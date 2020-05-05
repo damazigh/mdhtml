@@ -2,11 +2,7 @@
 Static material site generator from markdown files.
 ## Prerequisite
 - Minimum JRE / JDK : 11
-## How to use it
-### commands
-- `maven package` : to generate the jar
-- `java -jar <jarWithDependencies>.jar <mode> <workDir>` : cf below section
-### structure of generated files
+## Structure of generated files
 <pre>generated_dir
 ├── css/
 │ ├── style.css
@@ -17,6 +13,10 @@ Static material site generator from markdown files.
     ├── page_1.html
     ├── ...
     ├── page_n.html</pre>
+## How to use it
+### Commands
+- `maven package` : to generate the jar
+- `java -jar <jarWithDependencies>.jar <mode> <workDir>` : cf below section
 ### Mandatory parameters
 |Parameter|Description|Type of value|
 |-----------|-------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|

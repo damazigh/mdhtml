@@ -29,7 +29,7 @@ public class Option {
     public String getProjectName() {
         return StringUtils.isBlank(this.projectName) ? DefaultOptions.PROJECT_NAME: this.projectName;
     }
-    public String getnavColor() {
+    public String getNavcolor() {
         return StringUtils.isBlank(this.navcolor) ? DefaultOptions.NAV_COLOR : this.navcolor;
     }
     public String getSubHeader() {

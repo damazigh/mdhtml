@@ -15,6 +15,7 @@
         <common-lang3.version>3.10</common-lang3.version>
         <log4j2.version>2.6.1</log4j2.version>
         <commons-io.version>2.6</commons-io.version>
+        <commonsmark.version>0.14.0</commonsmark.version>
     </properties>
 
     <dependencies>
@@ -61,19 +62,14 @@
             <version>${commons-io.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.tautua.markdownpapers</groupId>
-            <artifactId>markdownpapers-core</artifactId>
-            <version>1.4.4</version>
-        </dependency>
-        <dependency>
             <groupId>com.atlassian.commonmark</groupId>
             <artifactId>commonmark</artifactId>
-            <version>0.14.0</version>
+            <version>${commonsmark.version}</version>
         </dependency>
         <dependency>
             <groupId>com.atlassian.commonmark</groupId>
             <artifactId>commonmark-ext-gfm-tables</artifactId>
-            <version>0.14.0</version>
+            <version>${commonsmark.version}</version>
         </dependency>
 
     </dependencies>

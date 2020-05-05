@@ -46,7 +46,7 @@ private static IGenerator instance;
     public String doGenerate(GenType type, String key, String content) {
         try {
             String[] keys = new String[] {"skeleton_sideNav", key, "navcolor", "projectName"};
-            String[] values = new String [] {this.readSideNavFromTemp(), content, this.context.getOptions().getnavColor(), this.context.getOptions().getProjectName()};
+            String[] values = new String [] {this.readSideNavFromTemp(), content, this.context.getOptions().getNavcolor(), this.context.getOptions().getProjectName()};
             Template t = this.cfg.getTemplate("skeleton.html");
             return this.process(t, this.ofMap(keys, values));
         } catch (IOException e) {

@@ -24,7 +24,7 @@ Initialisation mode creates a configuration file named `config.yml` which contai
 |**projectName**|defines the navbar project name on main html page|**text**|
 |**subHeader**|defines subheader text in navigation slider|**text**|
 |**tempDir**|defines temp directory|**text**|
-|**navcolor**|defines nav menu color|**text**|A color as css valid color value: example '1e88e5'|
+|**navcolor**|defines nav menu color|**text**|color as css valid color value - Example `#1e88e`|
 ## References
 This tool uses : 
 - Materialize CSS framework check official site at [Materialize](https://materializecss.com/)

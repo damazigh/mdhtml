@@ -6,6 +6,17 @@ Static material site generator from markdown files.
 ### commands
 - `maven package` : to generate the jar
 - `java -jar <jarWithDependencies>.jar <mode> <workDir>` : cf below section
+### structure of generated files
+generated_dir/<br/>
+├── **css/**<br/>
+│   ├── style.css<br/>
+├── **js/**<br/>
+│   ├── init.js<br/>
+│   └── chance.js<br/>
+└── **pages/**<br/>
+    ├── page_1.html<br/>
+    ├── ...<br/>
+    ├── page_n.html<br/>
 ### Mandatory parameters
 |Parameter|Description|Type of value|
 |-----------|-------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|

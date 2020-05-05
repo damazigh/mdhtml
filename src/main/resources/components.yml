@@ -1,0 +1,14 @@
+components:
+  sidenav:
+    wavyLink: '<li><a class="waves-effect" href="#!"></a></li>'
+    divider: '<li><div class="divider"></div></li>'
+    subheader: '<li><a class="subheader">${content}</a></li>'
+    link: '<li style="overflow:hidden"><a href="${link}">${content}</a></li>'
+    linkAsDiv: '<div style="overflow:hidden"><a href="${link}">${content}</a></div>'
+    container: '<ul id="slide-out" class="sidenav">${static} ${content}</ul>'
+    staticPart: '<li class="svg"><div class="user-view" style="height:100%"><div class="background"><div id="svg"></div></div></div></li><li><a href="${gitlabrepo}"><i class="material-icons">cloud</i>Gitlab repository</a></li><li><div class="divider"></div></li><li><a class="subheader">${subheader}</a></li>'
+  collapsible:
+    collapsibleHeaderImg: '<div class="collapsible-header"><i class="material-icons">${materialIcon}</i>${text}</div>'
+    collapsibleHeader: '<div class="collapsible-header waves-effect">${text}</div>'
+    collapsibleBody: '<div class="collapsible-body">${content}</div>'
+    container: '<ul class="collapsible collapsible-container"><li>${header} ${body}</li></ul>'

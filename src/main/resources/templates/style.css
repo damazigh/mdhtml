@@ -1,0 +1,25 @@
+li>a {
+  padding: 0 16px;
+}
+
+.sidenav-trigger-position {
+    right: 0;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+
+.sidenav-trigger-icon-font {
+    font-size: 35px;
+    color: white;
+}
+
+.title {
+    font-size: 25px;
+    color: white;
+    margin-left: 5px;
+    cursor:pointer;
+}
+.svg {
+    height: 25%;
+}

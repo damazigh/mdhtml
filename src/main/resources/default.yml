@@ -1,0 +1,10 @@
+inputDir: .
+navcolor:
+outputDir: 'mdhtml_generated'
+tempDir : 'temp'
+homePage:
+homePageMd:
+removePrefixes:
+  - '_'
+extensions:
+  - 'md'

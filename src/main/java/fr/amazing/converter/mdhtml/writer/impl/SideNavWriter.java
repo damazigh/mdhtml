@@ -6,6 +6,7 @@ import fr.amazing.converter.mdhtml.generator.Extras;
 import fr.amazing.converter.mdhtml.generator.IGenerator;
 import fr.amazing.converter.mdhtml.generator.SideNavGenerator;
 import fr.amazing.converter.mdhtml.writer.IWriter;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.Pair;
 
 import java.io.File;
@@ -39,6 +40,8 @@ public class SideNavWriter implements IWriter<List<Pair<String, Extras>>> {
             this.setContent(input, this.joinSiblingNode(groupedDeepestNode));
         }
 
+        // reorder
+        input = input.stream().sorted((f1, f2) -> StringUtils.compare(f1.getLeft(), f2.getLeft())).collect(Collectors.toList());
         // get top node
         String fullHtml = this.generator.doGenerate(GenType.SIDENAV, "content", this.findTopNode(input));
         this.writeContentToFile(fullHtml, "sideNav_temp.html", context.getOptions().getTempDir());

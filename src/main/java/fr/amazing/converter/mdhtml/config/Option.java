@@ -25,7 +25,7 @@ public class Option {
     private String homePageMd;
     @Getter(AccessLevel.NONE)
     private String homePage;
-
+    private String [] ignoredDirs;
     public String getProjectName() {
         return StringUtils.isBlank(this.projectName) ? DefaultOptions.PROJECT_NAME: this.projectName;
     }

@@ -13,8 +13,10 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
+import java.util.stream.Collectors;
 
 public class NavigationParser implements IParser<TreeNode<File>, List<Pair<String, Extras>>> {
     private final static Logger LOG = LoggerFactory.getLogger(NavigationParser.class);
@@ -65,4 +67,5 @@ public class NavigationParser implements IParser<TreeNode<File>, List<Pair<Strin
         }
         return htmlNode;
     }
+
 }

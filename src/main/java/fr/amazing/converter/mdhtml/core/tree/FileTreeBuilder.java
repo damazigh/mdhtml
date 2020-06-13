@@ -6,6 +6,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.io.File;
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class FileTreeBuilder implements ITreeBuilder<File> {
     private Context context = Context.getInstance();
@@ -14,7 +15,8 @@ public class FileTreeBuilder implements ITreeBuilder<File> {
         FileAssertion.assertExists(content);
         TreeNode<File> tree = t == null ? new TreeNode<>() : t;
         tree.setContent(content);
-        Arrays.stream(content.listFiles()).filter(f -> f.exists() && this.matchCriteria(f)).forEach(file -> {
+
+        Arrays.stream(content.listFiles()).filter(f -> f.exists() && this.matchCriteria(f)).sorted((f1, f2) -> StringUtils.compare(f1.getName(), f2.getName())).forEach(file -> {
             TreeNode<File> actual = TreeNode.of(file);
             actual.setParent(tree);
             tree.getChildren().add(actual);
@@ -33,6 +35,8 @@ public class FileTreeBuilder implements ITreeBuilder<File> {
     }
 
     private boolean matchDirCriteria(String dirname) {
-        return !StringUtils.equals(dirname, context.getOptions().getTempDir()) && ! StringUtils.equals(dirname, context.getOptions().getOutputDir());
+        return
+                !StringUtils.equals(dirname, context.getOptions().getTempDir()) && ! StringUtils.equals(dirname, context.getOptions().getOutputDir())
+                && !Arrays.stream(context.getOptions().getIgnoredDirs()).anyMatch(ignored -> StringUtils.equals(ignored, dirname));
     }
 }

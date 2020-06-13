@@ -8,3 +8,5 @@ removePrefixes:
   - '_'
 extensions:
   - 'md'
+ignoredDirs:
+  - 'generator'

@@ -2,6 +2,7 @@ package fr.amazing.converter.mdhtml.utils;
 
 import fr.amazing.converter.mdhtml.config.Context;
 import fr.amazing.converter.mdhtml.core.tree.TreeNode;
+import freemarker.template.utility.StringUtil;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
 
@@ -21,7 +22,8 @@ public class Utils {
         return (o1, o2) -> {
             int separator = StringUtils.countMatches(o1.getContent().getAbsolutePath(), File.separator) - StringUtils.countMatches(o2.getContent().getAbsolutePath(), File.separator);
             if (separator == 0) {
-                return o1.getContent().getAbsolutePath().length() - o2.getContent().getAbsolutePath().length();
+                var comp =  StringUtils.compare(o1.getContent().getName(), o2.getContent().getName());
+                return comp;
             }
             return separator;
         };
